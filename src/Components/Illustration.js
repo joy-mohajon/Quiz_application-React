@@ -1,11 +1,10 @@
 import React from "react";
-import image from "../assets/images/signup.svg";
 import classes from "../Styles/Illustration.module.css";
 
-const Illustration = () => {
+const Illustration = ({ image, text }) => {
   return (
     <div className={classes.illustration}>
-      <img src={image} alt="Signup" />
+      <img src={image} alt={text} />
     </div>
   );
 };

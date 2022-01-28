@@ -1,4 +1,5 @@
 import React from "react";
+import signupImage from "../../assets/images/signup.svg";
 import classes from "../../Styles/Signup.module.css";
 import Button from "../Button";
 import Checkbox from "../Checkbox";
@@ -11,7 +12,7 @@ const Signup = () => {
     <>
       <h1>Create an account</h1>
       <div className="column">
-        <Illustration />
+        <Illustration image={signupImage} text="Signup" />
         <Form className={classes.signup}>
           <TextInput icon="person" type="text" placeholder="Enter name" />
 
