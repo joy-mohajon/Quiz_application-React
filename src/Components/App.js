@@ -1,13 +1,15 @@
 import "../Styles/App.css";
 import Layout from "./Layout";
-import Login from "./pages/Login";
+import Result from "./pages/Result";
 
 function App() {
   return (
     <Layout>
       {/* <Home /> */}
       {/* <Signup /> */}
-      <Login />
+      {/* <Login /> */}
+      {/* <Quiz /> */}
+      <Result />
     </Layout>
   );
 }

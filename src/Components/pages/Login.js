@@ -21,7 +21,9 @@ const Login = () => {
 
           <TextInput icon="lock" type="password" placeholder="Enter password" />
 
-          <Button>Submit now</Button>
+          <Button>
+            <span>Submit now</span>
+          </Button>
 
           <div className="info">
             Already have an account? <a href="login.html">Login</a> instead.
