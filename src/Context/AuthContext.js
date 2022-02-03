@@ -54,6 +54,8 @@ export function AuthProvider({ children }) {
     return signOut(auth);
   }
 
+  // console.log(currentUser);
+
   const value = {
     currentUser,
     Signup,
