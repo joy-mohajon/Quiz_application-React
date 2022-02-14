@@ -1,7 +1,6 @@
 import {
   get,
   getDatabase,
-  limitToFirst,
   orderByKey,
   query,
   ref,
@@ -23,8 +22,8 @@ const useVideoList = (page) => {
       const videoQuery = query(
         videoRef,
         orderByKey(),
-        startAt(" " + page),
-        limitToFirst(8)
+        startAt("" + page)
+        // limitToFirst(8)
       );
 
       try {
@@ -34,7 +33,7 @@ const useVideoList = (page) => {
         //request firebase database
         const snapShot = await get(videoQuery);
         setLoading(false);
-
+        console.log("here is error");
         if (snapShot.exists()) {
           setVideos((prevVideos) => {
             return [...prevVideos, ...Object.values(snapShot.val())];
