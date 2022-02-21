@@ -1,6 +1,7 @@
 import {
   get,
   getDatabase,
+  limitToFirst,
   orderByKey,
   query,
   ref,
@@ -22,8 +23,8 @@ const useVideoList = (page) => {
       const videoQuery = query(
         videoRef,
         orderByKey(),
-        startAt("" + page)
-        // limitToFirst(8)
+        startAt("" + page),
+        limitToFirst(12)
       );
 
       try {

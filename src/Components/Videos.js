@@ -18,7 +18,11 @@ const Videos = () => {
           next={() => setPage(page + 8)}
         >
           {videos.map((video) => (
-            <Link to={`/Quiz/${video.youtubeID}`} key={video.youtubeID}>
+            <Link
+              to={`/Quiz/${video.youtubeID}`}
+              state={{ videoTitle: video.title }}
+              key={video.youtubeID}
+            >
               <Video title={video.title} id={video.youtubeID} noq={video.noq} />
             </Link>
           ))}
