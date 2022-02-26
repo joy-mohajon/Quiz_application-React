@@ -1,12 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { Link } from "react-router-dom";
-import { useState } from "react/cjs/react.development";
 import useVideoList from "../Hooks/useVideoList";
 import Video from "./Video";
 
 const Videos = () => {
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
   const { videos, loading, error, hasMore } = useVideoList(page);
 
   return (
