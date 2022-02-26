@@ -38,7 +38,6 @@ const Quiz = () => {
   const navigate = useNavigate();
 
   const location = useLocation();
-  console.log(location);
   const { videoTitle } = location.state;
 
   useEffect(() => {
@@ -59,7 +58,6 @@ const Quiz = () => {
 
   //handle when user click to get the next question
   function nextQuestion() {
-    console.log("next");
     if (currentQuestion + 1 < questions.length) {
       setCurrentQuestion((prevCurrent) => prevCurrent + 1);
     }
